@@ -17,3 +17,10 @@ ul li{
     flex: 1;
     text-align: center;
 }
+
+.active{
+    color: blue;
+}
+.secondaryactive{
+    color: red;
+}
