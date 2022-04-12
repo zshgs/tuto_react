@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-
+import './css/index_01.css'
 export default class  App extends Component {
     myref = React.createRef()
 
@@ -24,7 +24,13 @@ export default class  App extends Component {
           <button onClick={this.handleClick}>hi3</button>
           <ul>
               {
-                this.state.list.map((item,index)=><li  key={item.id}>{item.text}
+                this.state.list.map((item,index)=><li  key={item.id}>
+                    <span dangerouslySetInnerHTML={
+                        {
+                            __html:item.mytext
+                        }
+                    }>
+                    </span>{item.text}
                 <button onClick={()=>this.handleDel(index)}>del</button></li>)
               }
           </ul>
